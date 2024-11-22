@@ -1,0 +1,98 @@
+/* Base container styles */
+.landing-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  /* Background color of the page */
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 100%;
+  position: relative;
+  
+}
+
+/* Left and right images */
+.image-left,
+.image-right {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 3s ease-in-out;
+}
+
+/* Animation when active */
+.animate .image-left {
+  transform: translateX(-100%);
+}
+
+.animate .image-right {
+  transform: translateX(100%);
+}
+
+/* Center traveling section */
+.traveling-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000000;
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+  z-index: 0;
+}
+ .h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  margin: 0;
+  margin-bottom: 50px;
+
+ } 
+ .h2 {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 700;
+   font-size: 40px;
+   margin: 0;
+   margin-bottom: 25px;
+ }
+
+ .h3 {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 700;
+   font-size: 20px;
+   margin: 0;
+   margin-bottom: 30px;
+ }
+
+.animate .traveling-section {
+  opacity: 1;
+}
+
+.option-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #000000;
+  background: transparent;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: background 2s, color 2s;
+}
+
+.option-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
